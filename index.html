@@ -26,72 +26,15 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 
     <style type="text/css">
-      * { color:#fff; text-decoration: none;}
+
       img {
         max-width: 20%;
         height: 145px;
       }
 
-      
-
-      .button{
-        position:relative;
-        display:inline-block;
-        margin:20px;
-        cursor:pointer;
-        -moz-user-select: none;
-      }
-
-      .button a{
-        color:white;
-        font-family:Helvetica, sans-serif;
-        font-weight:bold;
-        font-size:20px;
-        text-align: center;
-        text-decoration:none;
-        background-color:#FFA12B;
-        display:block;
-        position:relative;
-        padding:10px 20px;
-        
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        text-shadow: 0px 1px 0px #000;
-        filter: dropshadow(color=#000, offx=0px, offy=1px);
-        
-        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-      }
-
-      .button a:active{
-        top:10px;
-        background-color:#F78900;
-        
-        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-        -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-        box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-      }
-
-      .button:after{
-        content:"";
-        height:100%;
-        width:100%;
-        padding:4px;
-        position: absolute;
-        bottom:-15px;
-        left:-4px;
-        z-index:-1;
-        background-color:#2B1800;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-      }
     </style>
   </head>
   <body>
@@ -105,7 +48,7 @@
           <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
             
             <h1>
-              <a href="" class="typewrite" data-period="2000" data-type='[ "Good Morning Anggi", "Have a Nice Day :)", "I Love You <3"]'>
+              <a style=" font-family: 'Merienda'; color:#fff; font-weight: bold;" href="" class="typewrite" data-period="2000" data-type='[ "Good Morning Anggi", "Have a Nice Day :)", "I Love You <3"]'>
                 <span class="wrap"></span>
               </a>
             </h1>
@@ -113,14 +56,16 @@
             <div class="gambar">
               <img id="myImage" src="images/mickeyloop2.gif">
             </div>
-
+            <br>
             <div 
             style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
             unselectable="on"
             onselectstart="return false;" 
             onmousedown="return false;"
             class="button">
-              <a id="myButton" onclick="minie();">Click Me :)</a>
+
+              <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a id="myButton" onclick="minie();" href="javascript:void(0);" class="btn btn-primary btn-outline-white px-5 py-3">Click Me :)</a></p>
+
             </div>
             
 
@@ -203,7 +148,7 @@
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        css.innerHTML = ".typewrite > .wrap {border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
   </script>
