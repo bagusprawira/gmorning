@@ -35,6 +35,10 @@
         height: 220px;
       }
 
+      .clock{
+        font-family: 'Merienda';
+      }
+
     </style>
   </head>
   <body>
@@ -46,7 +50,20 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            
+
+            <div class="clock">
+              <p style="color:white;" id="digital-clock"></p>
+
+              <script>
+              var myVar = setInterval(myTimer, 1000);
+
+              function myTimer() {
+                var d = new Date();
+                document.getElementById("digital-clock").innerHTML = d.toLocaleTimeString();
+              }
+              </script>
+            </div>
+
             <h2>
               <a style=" font-family: 'Merienda'; color:#fff;" href="" class="typewrite" data-period="2000" data-type='[ "Good Morning Anggi", "Have a Nice Day :)", "I Love You <3"]'>
                 <span class="wrap"></span>
